@@ -1,0 +1,19 @@
+{
+  "name": "flaskmicro",
+  "version": "1.0.0",
+  "description": "jquery front, python back",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knightofknee/flaskMicro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/knightofknee/flaskMicro/issues"
+  },
+  "homepage": "https://github.com/knightofknee/flaskMicro#readme"
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ya... ya ya ya ya </title>
+    <!-- <link rel="stylesheet" type="text/css" href="/examples/css/style.css"> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+  <h1>Get and set your key-value pairs here!! Just what you need, whenever you need it, down here at Cam Fallon's Key Values</h1>
+  <h2 id="test"></h2>
+  <form id="get-value">
+      <label for="search-key">Search Key</label>
+      <input id="search-key" name="sKey" type="text" placeholder="key">
+      <button class="get-set-buttons" type="submit"> Get key-value pairs</button>
+    </form>
+  <ul id="data-list">
+    <li>
+      <b class="key-column">Key</b>
+      <b class="value-column">Value</b>
+  </li>
+  </ul>
+  <form id="submit-pair">
+    <label for="key-input">Key</label>
+    <input name="gKey" id="key-input" type="text" placeholder="new key">
+    <label for="value-input">Value</label>
+    <input name="value" id="value-input" type="text" placeholder="new value">
+    <button class="get-set-buttons" type="submit"> key-value pairs</button>
+  </form>
+</body>
+
+<script type="text/javascript" src="{{url_for('static', filename='getset.js')}}"></script>
+<link rel="stylesheet"
+      type="text/css"
+      href="/static/style.css"/>
+</html>

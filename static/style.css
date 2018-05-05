@@ -1,0 +1,16 @@
+li {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+li:last-child {
+  border: none;
+}
+li:hover{
+  background-color: aqua;
+}
+.key-column {
+  flex:50%;
+}
+.value-column {
+  flex:50%;
+}

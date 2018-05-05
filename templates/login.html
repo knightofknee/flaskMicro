@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <!-- <link rel="stylesheet" type="text/css" href="/examples/css/style.css"> -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+  <h1>Log in or Sign up here!</h1>
+  <h2>Log in Below!</h2>
+  <form>
+    <label for="username-input">Username</label>
+    <input id="username-input" type="text" placeholder="new key">
+    <label for="password-input">Password</label>
+    <input id="password-input" type="text" placeholder="new value">
+    <button class="get-set-buttons" type="button"> Log In</button>
+  </form>
+  <h2>Sign up Here!</h2>
+  <form>
+    <label for="username-input">Username</label>
+    <input id="username-input" type="text" placeholder="new key">
+    <label for="password-input">Password</label>
+    <input id="password-input" type="text" placeholder="new value">
+    <label for="password-input2">Match Password</label>
+    <input id="password-input2" type="text" placeholder="new value">
+    <button class="get-set-buttons" type="button"> Sign up</button>
+  </form>
+</body>
+
+<script type="text/javascript" src="{{url_for('static', filename='getset.js')}}"></script>
+<link rel="stylesheet"
+      type="text/css"
+      href="/static/style.css"/>
+</html>
