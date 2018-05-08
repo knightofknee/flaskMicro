@@ -9,7 +9,12 @@
 <body>
   <h1>Log in or Sign up here!</h1>
   <h2>Log in Below!</h2>
-  <form>
+  <form action="/login" method="POST">
+    <input type="username" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <input type="submit" value="Log in">
+  </form>
+  <!-- <form>
     <label for="username-input">Username</label>
     <input id="username-input" type="text" placeholder="new key">
     <label for="password-input">Password</label>
@@ -25,7 +30,7 @@
     <label for="password-input2">Match Password</label>
     <input id="password-input2" type="text" placeholder="new value">
     <button class="get-set-buttons" type="button"> Sign up</button>
-  </form>
+  </form> -->
 </body>
 
 <script type="text/javascript" src="{{url_for('static', filename='getset.js')}}"></script>

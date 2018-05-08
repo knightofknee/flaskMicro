@@ -8,25 +8,31 @@
 </head>
 <body>
   <h1>Get and set your key-value pairs here!! Just what you need, whenever you need it, down here at Cam Fallon's Key Values</h1>
-  <h2 id="test"></h2>
-  <form id="get-value">
-      <label for="search-key">Search Key</label>
-      <input id="search-key" name="sKey" type="text" placeholder="key">
-      <button class="get-set-buttons" type="submit"> Get key-value pairs</button>
+  <div id="wrapper">
+  <div id="get-section">
+    <form id="get-value">
+      <!-- <label for="search-key">Search Key</label> -->
+      <input id="search-key" name="sKey" type="text" placeholder="Enter Key Here">
+      <button class="get-set-buttons" type="submit"> Get Value</button>
     </form>
-  <ul id="data-list">
+    <h4 id="test"></h4>
+  </div>
+  <!-- <ul id="data-list">
     <li>
       <b class="key-column">Key</b>
       <b class="value-column">Value</b>
   </li>
-  </ul>
-  <form id="submit-pair">
-    <label for="key-input">Key</label>
-    <input name="gKey" id="key-input" type="text" placeholder="new key">
-    <label for="value-input">Value</label>
-    <input name="value" id="value-input" type="text" placeholder="new value">
-    <button class="get-set-buttons" type="submit"> key-value pairs</button>
-  </form>
+  </ul> -->
+  <div id="set-section">
+    <form id="submit-pair">
+      <label for="key-input">Key</label>
+      <input name="gKey" id="key-input" type="text" placeholder="new key">
+      <label for="value-input">Value</label>
+      <input name="value" id="value-input" type="text" placeholder="new value">
+      <button class="get-set-buttons" type="submit"> Submit key-value pair</button>
+    </form>
+  </div>
+  </div>
 </body>
 
 <script type="text/javascript" src="{{url_for('static', filename='getset.js')}}"></script>

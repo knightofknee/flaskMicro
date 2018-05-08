@@ -13,7 +13,6 @@ $(function() {
   })
   $("#submit-pair").submit(function(event){
     event.preventDefault()
-    console.log('key:::', event.target.gKey.value)
     $.ajax({
       url: 'http://localhost:5000/setpairs',
       type: 'post',
@@ -24,11 +23,9 @@ $(function() {
     })
   })
 })
-// use .append on the ul #data-list
-
-
-// need a submit function defined here, attached to the form. have it do the set, then do another get so we have an updated version
+// use .append on the ul #data-list, make sure it updates as we go
 
 // then we add log in
 
 // and also look more into the database persistence then, maybe same time as login
+// persistence looking fine
