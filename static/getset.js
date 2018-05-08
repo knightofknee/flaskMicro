@@ -22,10 +22,35 @@ $(function() {
       }
     })
   })
+  $("#login-form").submit(function(event){
+    event.preventDefault()
+    $.ajax({
+      url: 'http://localhost:5000/login',
+      type: 'post',
+      data: {username: event.target.username.value, password: event.target.password.value},
+      success: function(data){
+        window.location.reload()
+      },
+      error: function(data) {
+        $("#password-failed").text('Incorrect Password')
+      }
+    })
+  })
+  $("#signup-form").submit(function(event){
+    event.preventDefault()
+    $.ajax({
+      url: 'http://localhost:5000/signup',
+      type: 'post',
+      data: {username: event.target.username.value, password: event.target.password.value},
+      success: function(data){
+        window.location.reload()
+      },
+      error: function(data) {
+        $("#signup-failed").text('username taken')
+      }
+    })
+  })
 })
 // use .append on the ul #data-list, make sure it updates as we go
 
-// then we add log in
-
-// and also look more into the database persistence then, maybe same time as login
-// persistence looking fine
+// handle returns?

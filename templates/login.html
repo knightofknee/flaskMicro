@@ -9,28 +9,30 @@
 <body>
   <h1>Log in or Sign up here!</h1>
   <h2>Log in Below!</h2>
-  <form action="/login" method="POST">
+  <!-- <form action="/login" method="POST">
     <input type="username" name="username" placeholder="Username">
     <input type="password" name="password" placeholder="Password">
     <input type="submit" value="Log in">
-  </form>
-  <!-- <form>
-    <label for="username-input">Username</label>
-    <input id="username-input" type="text" placeholder="new key">
-    <label for="password-input">Password</label>
-    <input id="password-input" type="text" placeholder="new value">
-    <button class="get-set-buttons" type="button"> Log In</button>
-  </form>
-  <h2>Sign up Here!</h2>
-  <form>
-    <label for="username-input">Username</label>
-    <input id="username-input" type="text" placeholder="new key">
-    <label for="password-input">Password</label>
-    <input id="password-input" type="text" placeholder="new value">
-    <label for="password-input2">Match Password</label>
-    <input id="password-input2" type="text" placeholder="new value">
-    <button class="get-set-buttons" type="button"> Sign up</button>
   </form> -->
+  <form id="login-form">
+    <label for="username-input">Username</label>
+    <input required name="username" id="username-input" type="text" placeholder="new key">
+    <label for="password-input">Password</label>
+    <input required name="password" id="password-input" type="text" placeholder="new value">
+    <button class="get-set-buttons" type="submit"> Log In</button>
+  </form>
+  <span id="password-failed"></span>
+  <h2>Sign up Here!</h2>
+  <form id="signup-form">
+    <label for="username-input">Username</label>
+    <input required name="username" id="username-input" type="text" placeholder="new key">
+    <label for="password-input">Password</label>
+    <input required name="password" id="password-input" type="text" placeholder="new value">
+    <!-- <label for="password-input2">Match Password</label>
+    <input id="password-input2" type="text" placeholder="new value"> -->
+    <button class="get-set-buttons" type="submit"> Sign up</button>
+  </form>
+  <span id="signup-failed"></span>
 </body>
 
 <script type="text/javascript" src="{{url_for('static', filename='getset.js')}}"></script>

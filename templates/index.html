@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <title>ya... ya ya ya ya </title>
-    <!-- <link rel="stylesheet" type="text/css" href="/examples/css/style.css"> -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
 <body>
@@ -12,7 +11,7 @@
   <div id="get-section">
     <form id="get-value">
       <!-- <label for="search-key">Search Key</label> -->
-      <input id="search-key" name="sKey" type="text" placeholder="Enter Key Here">
+      <input required id="search-key" name="sKey" type="text" placeholder="Enter Key Here">
       <button class="get-set-buttons" type="submit"> Get Value</button>
     </form>
     <h4 id="test"></h4>
@@ -26,13 +25,16 @@
   <div id="set-section">
     <form id="submit-pair">
       <label for="key-input">Key</label>
-      <input name="gKey" id="key-input" type="text" placeholder="new key">
+      <input required name="gKey" id="key-input" type="text" placeholder="new key">
       <label for="value-input">Value</label>
-      <input name="value" id="value-input" type="text" placeholder="new value">
+      <input required name="value" id="value-input" type="text" placeholder="new value">
       <button class="get-set-buttons" type="submit"> Submit key-value pair</button>
     </form>
   </div>
   </div>
+  <form id="logout-section" action="/logout" method="GET">
+    <input type="submit" value="Log Out">
+  </form>
 </body>
 
 <script type="text/javascript" src="{{url_for('static', filename='getset.js')}}"></script>
