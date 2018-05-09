@@ -74,7 +74,7 @@ def getpairs():
     result = Entry.query.filter_by(name=request.args.get('key'), username=session['username']).first()
     if result == None:
       return 'No such key found'
-    return result.value
+    return 'Value: ' + result.value
 
 @app.route('/setpairs', methods=['POST'])
 def setpairs():
@@ -90,5 +90,3 @@ def setpairs():
       db.session.commit()
       response = 'Value Overwritten'
     return response
-
-# move database stuff into other file???

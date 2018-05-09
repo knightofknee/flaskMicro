@@ -3,36 +3,24 @@
 <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <!-- <link rel="stylesheet" type="text/css" href="/examples/css/style.css"> -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
-<body>
+<body id="login-wrapper">
   <h1>Log in or Sign up here!</h1>
-  <h2>Log in Below!</h2>
-  <!-- <form action="/login" method="POST">
-    <input type="username" name="username" placeholder="Username">
-    <input type="password" name="password" placeholder="Password">
-    <input type="submit" value="Log in">
-  </form> -->
-  <form id="login-form">
-    <label for="username-input">Username</label>
-    <input required name="username" id="username-input" type="text" placeholder="new key">
-    <label for="password-input">Password</label>
-    <input required name="password" id="password-input" type="text" placeholder="new value">
+  <h3>Log in Below!</h3>
+  <form id="login-form" class="login-screen-form">
+    <input class="login-screen-input" required name="username" id="username-input" type="text" placeholder="enter username">
+    <input class="login-screen-input" required name="password" id="password-input" type="password" placeholder="enter password">
     <button class="get-set-buttons" type="submit"> Log In</button>
   </form>
-  <span id="password-failed"></span>
-  <h2>Sign up Here!</h2>
-  <form id="signup-form">
-    <label for="username-input">Username</label>
-    <input required name="username" id="username-input" type="text" placeholder="new key">
-    <label for="password-input">Password</label>
-    <input required name="password" id="password-input" type="text" placeholder="new value">
-    <!-- <label for="password-input2">Match Password</label>
-    <input id="password-input2" type="text" placeholder="new value"> -->
+  <h5 id="password-failed"></h5>
+  <h3>Sign up Here!</h3>
+  <form id="signup-form" class="login-screen-form">
+    <input class="login-screen-input" required name="username" id="username-input2" type="text" placeholder="new username">
+    <input class="login-screen-input" required name="password" id="password2-input" type="text" placeholder="new password">
     <button class="get-set-buttons" type="submit"> Sign up</button>
   </form>
-  <span id="signup-failed"></span>
+  <h5 id="signup-failed"></h5>
 </body>
 
 <script type="text/javascript" src="{{url_for('static', filename='getset.js')}}"></script>

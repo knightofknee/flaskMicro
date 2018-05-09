@@ -6,10 +6,12 @@ $(function() {
       type: 'get',
       data: {key: event.target.sKey.value},
       success: function(data){
-        $("#test").text(data)
+        $("#get-result").text(data)
+      },
+      error: function(){
+        $("#get-result").text('There was an error trying to retrieve the data')
       }
       })
-    // $("ul").append("<li><div class='key-column'>har</div><div class='value-column'>hardyhar</div></li>")
   })
   $("#submit-pair").submit(function(event){
     event.preventDefault()
@@ -18,7 +20,10 @@ $(function() {
       type: 'post',
       data: {key: event.target.gKey.value, value: event.target.value.value},
       success: function(data){
-        console.log('res, ', data)
+        $("#set-result").text(data)
+      },
+      error: function(){
+        $("#set-result").text('There was an error trying to retrieve the data')
       }
     })
   })
@@ -46,11 +51,8 @@ $(function() {
         window.location.reload()
       },
       error: function(data) {
-        $("#signup-failed").text('username taken')
+        $("#signup-failed").text('Username Already Taken')
       }
     })
   })
 })
-// use .append on the ul #data-list, make sure it updates as we go
-
-// handle returns?

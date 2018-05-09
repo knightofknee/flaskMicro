@@ -1,39 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>ya... ya ya ya ya </title>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <meta charset="utf-8">
+  <title>The GETSET Station</title>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
 <body>
-  <h1>Get and set your key-value pairs here!! Just what you need, whenever you need it, down here at Cam Fallon's Key Values</h1>
+  <h2>Get and set your key-value pairs below</h2>
+  <h3>You are logged in as: {{ session['username']}}</h3>
   <div id="wrapper">
-  <div id="get-section">
-    <form id="get-value">
-      <!-- <label for="search-key">Search Key</label> -->
-      <input required id="search-key" name="sKey" type="text" placeholder="Enter Key Here">
-      <button class="get-set-buttons" type="submit"> Get Value</button>
-    </form>
-    <h4 id="test"></h4>
-  </div>
-  <!-- <ul id="data-list">
-    <li>
-      <b class="key-column">Key</b>
-      <b class="value-column">Value</b>
-  </li>
-  </ul> -->
-  <div id="set-section">
-    <form id="submit-pair">
-      <label for="key-input">Key</label>
-      <input required name="gKey" id="key-input" type="text" placeholder="new key">
-      <label for="value-input">Value</label>
-      <input required name="value" id="value-input" type="text" placeholder="new value">
-      <button class="get-set-buttons" type="submit"> Submit key-value pair</button>
-    </form>
-  </div>
+    <div id="get-section">
+      <form id="get-value">
+        <input required id="search-key" name="sKey" type="text" placeholder="Enter Key Here">
+        <button class="get-set-buttons" type="submit"> Get Value</button>
+      </form>
+      <h4 id="get-result"></h4>
+    </div>
+    <div id="set-section">
+      <form id="submit-pair">
+        <input required name="gKey" id="key-input" type="text" placeholder="new key">
+        <input required name="value" id="value-input" type="text" placeholder="new value">
+        <button class="get-set-buttons" type="submit"> Submit key-value pair</button>
+      </form>
+      <h4 id="set-result"></h4>
+    </div>
   </div>
   <form id="logout-section" action="/logout" method="GET">
-    <input type="submit" value="Log Out">
+    <button id="logout-button" type="submit">Log Out</button>
   </form>
 </body>
 
